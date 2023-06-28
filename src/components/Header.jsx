@@ -1,6 +1,5 @@
-import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-const Header = () => {
+const Header = ({ handleToggle }) => {
   return (
     <div>
       <header className="w-full ">
@@ -15,7 +14,10 @@ const Header = () => {
               </ul>
             </div>
             <div>
-              <button className="text-2xl md:hidden lg:hidden">
+              <button
+                className="text-2xl md:hidden lg:hidden"
+                onClick={handleToggle}
+              >
                 <GiHamburgerMenu />
               </button>
             </div>

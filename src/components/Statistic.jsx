@@ -19,8 +19,9 @@ const Statistic = () => {
             statistics dashboard.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
-          <div>
+        <div className=" relative grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
+          <div className="h-2 md:bg-custom_primary_cyan md:w-full md:absolute md:top-[50%] " />
+          <div className="relative">
             <StatisticCard
               title="Brand Recognition"
               image={Brand}
@@ -28,7 +29,8 @@ const Statistic = () => {
         thing. Branded links help instil confidence in your content."
             />
           </div>
-          <div className=" md:mt-10">
+
+          <div className=" md:mt-10 relative">
             <StatisticCard
               title="Detailed Records"
               image={Details}
@@ -36,7 +38,7 @@ const Statistic = () => {
   people engage with your content helps inform better decisions."
             />
           </div>
-          <div className="md:mt-20">
+          <div className="md:mt-20 relative">
             <StatisticCard
               title="Fully Customizable"
               image={Customized}

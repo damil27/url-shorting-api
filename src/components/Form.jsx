@@ -2,25 +2,11 @@ import React, { useState } from "react";
 import Bg from "../images/bg-shorten-desktop.svg";
 
 // GET/POST:
-const Form = () => {
-  const [inputVal, setInputVal] = useState("");
-  const [shortlyApi, setShortlyApi] = useState([]);
-
-  const getAPI = async () => {
-    const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${inputVal}`);
-    const data = await res.json();
-    return data;
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShortlyApi(getAPI());
-    setInputVal("");
-    console.log(shortlyApi);
-  };
+const Form = ({ handleSubmit, inputVal, setInputVal }) => {
   return (
     <div>
       <div className="container ">
-        <div className="w-full relative  ">
+        <div className="w-full relative  -mb-10 ">
           <img
             src={Bg}
             alt="form background"
@@ -42,6 +28,7 @@ const Form = () => {
               Shorten It
             </button>
           </form>
+        
         </div>
       </div>
     </div>
